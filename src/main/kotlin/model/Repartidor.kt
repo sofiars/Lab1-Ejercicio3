@@ -9,7 +9,7 @@ class Repartidor: Empleado {
         this.zona = zona
     }
 
-    fun calcularSalario(){
+    override fun PLUS(){
         if(this.edad < 25 && this.zona == "Zona 3"){
             this.salario += this.plus
         }

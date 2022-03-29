@@ -1,10 +1,10 @@
 package model
 
-open class Empleado {
-    var nombre: String = ""
-    var edad: Int = 0
-    var salario: Int = 0
-    var plus: Int = 300
+abstract class Empleado {
+    protected var nombre: String = ""
+    protected var edad: Int = 0
+    protected var salario: Int = 0
+    val plus: Int = 300
 
     constructor()
 
@@ -13,5 +13,11 @@ open class Empleado {
         this.edad = edad
         this.salario = salario
     }
+
+    abstract fun PLUS()
+    override fun toString(): String {
+        return "Empleado(salario=$salario)"
+    }
+
 
 }
